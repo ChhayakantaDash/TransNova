@@ -59,3 +59,9 @@ async def translate_text(request: TranslationRequest):
         return {"translation": result}
     except Exception as e:
         return {"error": str(e)}
+
+# ✅ Keep this at the bottom, top-level
+if __name__ == "__main__":
+    import uvicorn
+    port = int(os.environ.get("PORT", 8000))  # Render injects PORT
+    uvicorn.run("app:app", host="0.0.0.0", port=port)
