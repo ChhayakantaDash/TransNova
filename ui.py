@@ -26,7 +26,7 @@ selected_language = st.selectbox("Language", language_options)
 if st.button("Translate"):
     if text_to_translate and selected_language:
         # Define the API endpoint
-        api_url = "http://127.0.0.1:8000/translate"
+        api_url = "https://transnova-1.onrender.com/translate"
         
         # Create the JSON payload to send to the API
         payload = {
